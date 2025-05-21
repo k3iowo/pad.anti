@@ -1,0 +1,72 @@
+
+.picture_random{
+    width: 200px;
+    height: 200px;
+    grid-auto-flow: column;
+
+    /*display: flex;	フレックスコンテナを作る
+    flex-direction	子要素の並ぶ向きを決める（row / column など）
+    justify-content	主軸（横）の揃え方（左寄せ / 中央 / 均等など）
+    align-items	交差軸（縦）の揃え方（上 / 中央 / 下）
+    gap	子要素間の間隔を設定*/
+}
+.picture{
+    width: 200px;
+    height: 200px;
+    grid-auto-flow: column;
+}
+#menber_{
+    text-align: center;
+    display: block;
+    width: 300px;
+    height: 30px;
+}
+#name
+{
+    display: grid;
+    grid-auto-flow: column;
+}
+#ban_men
+{
+    display: grid;
+    grid-auto-flow: column;
+}
+.text
+{
+    display: flex;
+    gap: 20px;
+    font-size: 25px;
+}
+input[type="text"]
+{
+    text-align: center;
+}
+#ban_number
+{
+    text-align: center;
+    display: block;
+    width: 300px;
+    height: 30px;
+}
+#name_each
+{
+    display: grid;
+    grid-auto-flow: column;
+    overflow-wrap: break-word; /*折り返し*/
+}
+.checkbox
+{
+    font-size: 10px;
+}
+#menber_each{
+    text-align: center;
+    display: block;
+    width: 300px;
+    height: 30px;
+}
+#each_roll{
+    text-align: center;
+    display: block;
+    width: 300px;
+    height: 30px;
+}

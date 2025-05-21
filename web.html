@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            キャラクターランダム選択
+        </title>
+        <script src="valorant.js"></script>
+        <link rel="stylesheet" href="web.css">
+    </head>
+  
+    <body> 
+        <div>
+            <div class="text">完全ランダム</div>
+            <div>人数を書いてください</div> 
+        <div id="menber">
+            <p><input type="number" id="menber_"></p>
+        </div>
+        <p>
+            <div><input type="button" id="send" style="display: inline;" value="送信！" onclick="pushButton()"></div>
+            <p id="error" style="color: red; display: none;">入力がありません！</p>
+        </p>
+        <div id="_text">
+            <p><label id="text"></label></p>
+            <input type="button" id="decide" style="display: none;" value="決定！" onclick="decideButton()">
+        </div>
+        <div id="name"></div>
+        <p><input type="button" id="random" style="display: none;" value="ランダム抽選！" onclick="randomButton()"></p>
+        <p><input type="button" id="reroll" style="display: none;" value="再抽選！" onclick="reroll()"></p>
+        </div>
+        
+        <div>
+            <div class="text">各ロール</div> 
+            <div>人数を書いてください</div> 
+        <div id="number_each">
+            <p><input type="number" id="menber_each"></p>
+        </div>
+        <div>
+            <div class="text" id="name_each"></div>
+            <p>
+                <input type="button" id="send_each" style="display: inline;" value="送信！" onclick="each_pushButton()">
+            </p>
+            <p>
+                <input type="button" id="decide_each" style="display: none;" value="決定！" onclick="each_decideButton()">
+                <p id="error_each" style="color: red; display: none;">入力がありません！</p>
+                <p id="check_error" style="color: red; display: none;">つより多くチェックしないでください！</p>
+                <div id="each_check">
+                <input type="button" id="each_random" style="display: none;" value="抽選！" onclick="each_random()"> 
+                <input type="button" id="each_reroll" style="display: none;" value="再抽選！" onclick="each_reroll()">
+        </div>
+            </p>
+            <div id="check"></div>
+        </div>
+        <div>
+            <div class="text">ロール決め</div>
+            <p>
+                <input type="number" id="each_roll">
+            </p>
+            <div id="roll_text"></div>
+            <div id="free"></div>
+            <p>
+                <input type="button" id="each_roll_send" style="display: inline;" value="送信！" onclick="each_roll()">
+                <input type="button" id="each_roll_decide" style="display: none;" value="決定！" onclick="decide_roll()">
+                <input type="button" id="each_roll_random" style="display: none;" value="抽選！" onclick="each_roll_random()">
+                <input type="button" id="each_roll_reroll" style="display: none;" value="再抽選！" onclick="each_reroll()">
+            </p>
+            <p>
+                <p id="roll_error" style="color: red; display: none;">入力がありません！</p>
+            </p>
+        </div>
+        <div id="roll">
+        <div>
+            <div class="text">バンピック</div>
+            <div>人数を書いてください</div>
+        </div>
+        <p>
+            <input type="number" id="ban_number">
+        </p>
+        <div id="ban_menber"></div>
+        <p>
+        <div id="ban_men"></div>
+        <div><input type="button" id="ban_send" style="display: inline;" value="送信" onclick="ban_pushButton()"></div>
+        </p>
+        <p id="ban_error" style="color: red; display: none;">入力がありません！</p>
+        <p>
+            <input type="button" id="ban_decide" style="display: none;" value="決定" onclick="ban_decideButton()">
+            <input type="button" id="ban_random" style="display: none;" value="抽選！" onclick="ban_randomButton()">
+            <input type="button" id="ban_reroll" style="display: none;" value="再抽選！" onclick="ban_rerollButton()">
+        </p>
+    </body>
+</html>
