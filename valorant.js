@@ -74,11 +74,11 @@ const cont_images = [
 ]
 const cont_number = [1,2,3,4,5,6]
 
-const role = [
-    'デュエリスト',
-    'イニシエーター',
-    'センチネル',
-    'コントローラー',
+let decide_roll_shaffule = [
+    'デュエリスト　',
+    'イニシエーター　',
+    'センチネル　',
+    'コントローラー　',
 ]
 
 function pushButton()
@@ -509,6 +509,7 @@ function each_roll()
 
         let input = document.createElement('input');
         input.id = 'rollid' + number;
+        input.type = 'text';
 
         parent.appendChild(br);
         parent.appendChild(label);
@@ -520,10 +521,9 @@ function each_roll()
     send.style.display = 'none';
     decide.style.display = 'inline';
 }
-function decide_roll()
+function decide_roll_()
 {
     let number = document.getElementById('each_roll').value;
-    let menber_ = document.getElementById('roll_text');
     let menber = 1;
 
     let decide = document.getElementById('each_roll_decide');
@@ -531,58 +531,21 @@ function decide_roll()
     while(number > menber -1)
     {
         let name = document.getElementById('rollid' + menber).value; 
-
-        let form = document.createElement('form');
-        form.id = 'roll' + menber;
-        menber_.appendChild(form)
+        let parent = document.getElementById('roll_name');
 
         let name_ = document.createElement('div');
         name_.classList.add('text');
-        form.appendChild(name_);
-        name_.innerText = name;
+        name_.id = 'roll_id' + menber;
+        name_.innerText = name + '　　';
+        parent.appendChild(name_);
 
-        let dhue_l = document.createElement('label');
-        dhue_l.innerText = 'デュエリスト';
-        form.appendChild(dhue_l);
-
-        let dhue = document.createElement('input');
-        dhue.type = 'checkbox';
-        dhue.id = 'check_roll';
-        form.appendChild(dhue);
-
-
-        let inisi_l = document.createElement('label');
-        inisi_l.innerText = 'イニシエーター';
-        form.appendChild(inisi_l);
-
-        let inisi = document.createElement('input');
-        inisi.type = 'checkbox';
-        inisi.id = 'check_roll';
-        form.appendChild(inisi);
-
-        let senti_l = document.createElement('label');
-        senti_l.innerText = 'センチネル';
-        form.appendChild(senti_l);
-
-        let senti = document.createElement('input');
-        senti.type='checkbox';
-        senti.id = 'check_roll';
-        form.appendChild(senti);
-
-        let cont_l = document.createElement('label');
-        cont_l.innerText = 'コントローラー';
-        form.appendChild(cont_l);
-
-        let cont = document.createElement('input');
-        cont.type = 'checkbox';
-        cont.id = 'check_roll';
-       form.appendChild(cont);
         menber++;
     }
     let free_parent = document.getElementById('free');
     free_parent.innerText = '自由枠あり';
     let free = document.createElement('input');
-    free.type = 'checkbox';
+    free.type = "checkbox";
+    free.id = 'free_check';
     free_parent.appendChild(free);
 
     decide.style.display = 'none';
@@ -591,14 +554,94 @@ function decide_roll()
 
 function each_roll_random()
 {
-    let menber = 1;
-    let number = document.getElementById('each_roll').value;
-    let checkboxes = document.querySelectorAll('input[id="check_roll"]:checked');
+    let checkbox = document.getElementById("free_check");
+    let menber = document.getElementById('each_roll').value;
+    let number = 1;
 
-    while(number > menber -1)
+    if(checkbox.checked)
     {
-        menber++;
+        decide_roll_shaffule.push('自由枠!　');
     }
+
+    role_shuffle();
+    while(menber > number -1)
+    {
+        let role = decide_roll_shaffule[number -1];
+
+        let div = document.createElement('div');
+        div.id = '_roll_' + number;
+        let parent = document.getElementById('roll_id' + number);
+        parent.appendChild(div);
+        div.innerText = role;
+
+        number++;
+    }
+    console.log(decide_roll_shaffule);
+    let random = document.getElementById('each_roll_random');
+    let reroll = document.getElementById('each_roll_reroll');
+    random.style.display = 'none';
+    reroll.style.display = 'inline';
+}
+
+function each_reroll()
+{
+    let menber = document.getElementById('each_roll').value;
+    let number = 1;
+    let checkbox = document.getElementById("free_check");
+
+    if(checkbox.checked && !decide_roll_shaffule.includes('自由枠!　'))
+    {
+        decide_roll_shaffule.push('自由枠!　');
+        while(menber > number-1)
+    {
+        let role = decide_roll_shaffule[number -1];
+        let text = document.getElementById('_roll_' + number);
+        text.innerText = "";
+        text.innerText = role;
+
+        number++;
+    }
+        console.log(decide_roll_shaffule);
+    }else if(!checkbox.checked && decide_roll_shaffule.includes('自由枠!　'))
+    {
+         decide_roll_shaffule = decide_roll_shaffule.filter(role => role !== '自由枠!　');
+    role_shuffle();
+    while(menber > number-1)
+    {
+        let role = decide_roll_shaffule[number -1];
+        let text = document.getElementById('_roll_' + number);
+        text.innerText = "";
+        text.innerText = role;
+
+        number++;
+    }
+    }else
+    {
+        role_shuffle();
+    while(menber > number-1)
+    {
+        let role = decide_roll_shaffule[number -1];
+        let text = document.getElementById('_roll_' + number);
+        text.innerText = "";
+        text.innerText = role;
+
+        number++;
+    }
+    }
+        console.log(decide_roll_shaffule);
+
+}
+
+function role_shuffle() //lengthで文字列が何個あるかを取得してる
+{
+    for(let i = decide_roll_shaffule.length -1; i>0; i--){
+        const j = Math.floor(Math.random() * (i + 1)); 
+        //Math.floor()で小数点以下切り捨て整数に
+        //Math.randomで0以上1未満のランダムな小数を返す
+        //Math.random() * (i + 1) によって、0以上j以下iの範囲でランダムな整数 j を生成します。
+        [decide_roll_shaffule[i], decide_roll_shaffule[j]] = [decide_roll_shaffule[j], decide_roll_shaffule[i]];
+    }
+    return decide_roll_shaffule;
 }
 
 function ban_pushButton()
