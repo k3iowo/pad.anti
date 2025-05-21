@@ -26,6 +26,12 @@
     display: grid;
     grid-auto-flow: column;
 }
+.each_roll
+{
+    display: flex;
+    gap: 20px;
+    font-size: 25px;
+}
 #ban_men
 {
     display: grid;
