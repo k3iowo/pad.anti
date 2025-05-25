@@ -29,7 +29,7 @@ const picture_images = [
     'https://appmedia.jp/wp-content/uploads/2024/10/102454_ua8fj.webp',//ハーバー
     'https://appmedia.jp/wp-content/uploads/2024/10/102453_r6kd3.webp',//クローヴ
 
-];
+]
 
 const dhue_images = [
     'https://appmedia.jp/wp-content/uploads/2024/10/102450_urswg.webp',//ジェット
@@ -78,8 +78,70 @@ let decide_roll_shaffule = [
     'デュエリスト　',
     'イニシエーター　',
     'センチネル　',
-    'コントローラー　',
+    'コントローラー　',//五人で自由枠なしでやるとばぐる　直せ
 ]
+
+let down_chara = [
+    'https://appmedia.jp/wp-content/uploads/2024/10/102450_urswg.webp',//ジェット
+    'https://appmedia.jp/wp-content/uploads/2024/10/102451_n4wda.webp',//フェニックス
+    'https://appmedia.jp/wp-content/uploads/2024/10/102451_axmlk.webp',//ネオン
+    'https://appmedia.jp/wp-content/uploads/2024/10/102451_3lupz.webp',//ヨル
+    'https://appmedia.jp/wp-content/uploads/2024/10/102451_8lwo4.webp',//レイズ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102451_a3jmc.webp',//レイナ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_ltq0o.webp',//アイソ
+    'https://appmedia.jp/wp-content/uploads/2023/06/101811_9esu4.webp',//ウェイレイ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_kawcj.webp',//ソーヴァ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_qhcgd.webp',//KAY/O
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_n05kl.webp',//スカイ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_gjwef.webp',//フェイド
+    'https://appmedia.jp/wp-content/uploads/2024/10/102453_zlbdp.webp',//ブリーチ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_wejd5.webp',//ゲッコー
+    'https://appmedia.jp/wp-content/uploads/2025/01/104157_byjz0.webp',//テホ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_djghe.webp',//セージ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_yjxc1.webp',//キルジョイ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_pdiuz.webp',//サイファー
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_j0xzl.webp',//チェンバー
+    'https://appmedia.jp/wp-content/uploads/2024/10/102455_uevjn.webp',//デッドロック
+    'https://appmedia.jp/wp-content/uploads/2024/09/120938_ac05l.webp',//ヴァイス
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_7l3dv.webp',//ブリムストーン
+    'https://appmedia.jp/wp-content/uploads/2024/10/102453_15fkt.webp',//アストラ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102453_dqika.webp',//ヴァイパー
+    'https://appmedia.jp/wp-content/uploads/2024/10/102453_87ag3.webp',//オーメン
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_ua8fj.webp',//ハーバー
+    'https://appmedia.jp/wp-content/uploads/2024/10/102453_r6kd3.webp',//クローヴ
+]
+
+let down_roll = [
+    { id: 1, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102450_urswg.webp'},
+    { id: 1, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102451_n4wda.webp'},
+    { id: 1, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102451_axmlk.webp'},
+    { id: 1, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102451_3lupz.webp'},
+    { id: 1, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102451_8lwo4.webp'},
+    { id: 1, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102451_a3jmc.webp'},
+    { id: 1, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102452_ltq0o.webp'},
+    { id: 1, img: 'https://appmedia.jp/wp-content/uploads/2023/06/101811_9esu4.webp'},
+    { id: 2, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102452_kawcj.webp'},
+    { id: 2, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102452_qhcgd.webp'},
+    { id: 2, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102452_n05kl.webp'},
+    { id: 2, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102452_gjwef.webp'},
+    { id: 2, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102453_zlbdp.webp'},
+    { id: 2, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102452_wejd5.webp'},
+    { id: 2, img: 'https://appmedia.jp/wp-content/uploads/2025/01/104157_byjz0.webp'},
+    { id: 3, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102454_djghe.webp'},
+    { id: 3, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102454_yjxc1.webp'},
+    { id: 3, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102454_pdiuz.webp'},
+    { id: 3, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102454_j0xzl.webp'},
+    { id: 3, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102455_uevjn.webp'},
+    { id: 3, img: 'https://appmedia.jp/wp-content/uploads/2024/09/120938_ac05l.webp'},
+    { id: 4, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102454_7l3dv.webp'},
+    { id: 4, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102453_15fkt.webp'},
+    { id: 4, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102453_dqika.webp'},
+    { id: 4, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102453_87ag3.webp'},
+    { id: 4, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102454_ua8fj.webp'},
+    { id: 4, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102453_r6kd3.webp'},
+
+]
+let remove_picture = [];
 
 function pushButton()
 {
@@ -585,8 +647,8 @@ function each_roll_random()
 
 function each_reroll()
 {
-    let menber = document.getElementById('each_roll').value;
     let number = 1;
+    let menber = document.getElementById('each_roll').value;
     let checkbox = document.getElementById("free_check");
 
     if(checkbox.checked && !decide_roll_shaffule.includes('自由枠!　'))
@@ -673,6 +735,24 @@ function ban_pushButton()
 
         menber++;
         }
+        let chara = document.getElementById('chara');
+    let roll_check = document.getElementById('roll_check');
+
+    let input_chara = document.createElement('input');
+    let input_roll = document.createElement('input');
+
+    chara.innerText = 'キャラ選択';
+    roll_check.innerText = 'ロール選択';
+
+    chara.appendChild(input_chara);
+    input_chara.type = 'checkbox';
+    input_chara.id = 'chara_check';
+
+    roll_check.appendChild(input_roll);
+    input_roll.type ='checkbox';
+    input_roll.id = 'input_roll';
+
+
     }else
     {
         ban_error.style.display = 'inline';
@@ -680,18 +760,420 @@ function ban_pushButton()
 }
 function ban_decideButton()
 {    
+    let picture = 0;
     let menber = 1;
-    let ban_men = document.getElementById('ban_men');
     let ban_number = document.getElementById('ban_number').value;
+    let ban_men = document.getElementById('ban_men');
+    let chara = document.getElementById('chara_check');
+    let input_roll = document.getElementById('input_roll');
+
+    let chara_error = document.getElementById('chara_error');
+    let decide = document.getElementById('ban_decide');
+    let random = document.getElementById('ban_random');
+    let ban_img = document.getElementById('ban_img');
+
     while(ban_number > menber -1)
     {
         let ban_menber = document.getElementById('ban_id' + menber).value;
         let menber_ = document.createElement('div');
         menber_.textContent = ban_menber;
-        menber_.id = 'Id' + menber;
+        menber_.id = 'Idban' + menber;
         menber_.classList.add('text');
         ban_men.appendChild(menber_);
+
+        if(input_roll.checked && !chara.checked)
+        {
+        let parent = document.getElementById('Idban' + menber);
+        let select = document.createElement('select');
+        select.id = 'select' + menber;
+
+
+        let dhue_option = document.createElement('option');
+        dhue_option.innerText = 'デュエリスト';
+        dhue_option.value = 'デュエリスト';
+
+        let inisi_option = document.createElement('option');
+        inisi_option.innerText = 'イニシエーター';
+        inisi_option.value = 'イニシエーター';
+
+        let senti_option = document.createElement('option');
+        senti_option.innerText = 'センチネル';
+        senti_option.value = 'センチネル';
+
+        let cont_option = document.createElement('option');
+        cont_option.innerText = 'コントローラー';
+        cont_option.value = 'コントローラー';
+
+        parent.appendChild(select);
+        select.appendChild(dhue_option);
+        select.appendChild(inisi_option);
+        select.appendChild(senti_option);
+        select.appendChild(cont_option);
+
+        let label = document.createElement('label');
+        let text = document.getElementById('ban_id' + menber).value;
+        ban_img.appendChild(label);
+        label.innerText = text;
+        label.id = 'ban_name' + menber;
+        label.classList.add('text');
+
+        decide.style.display = 'none';
+        random.style.display = 'inline';
+        }
+
+        if(chara.checked && !input_roll.checked)
+        {
+            let parent = document.getElementById('Idban' + menber);
+            let select = document.createElement('select');
+            select.id = 'select' + menber;
+
+            let jett = document.createElement('option');
+            jett.innerText = 'ジェット';
+            jett.value = 'https://appmedia.jp/wp-content/uploads/2024/10/102450_urswg.webp';
+
+            let feni = document.createElement('option');
+            feni.innerText = 'フェニックス';
+            feni.value = 'https://appmedia.jp/wp-content/uploads/2024/10/102451_n4wda.webp';
+
+            let neon = document.createElement('option');
+            neon.innerText = 'ネオン';
+            neon.value ='https://appmedia.jp/wp-content/uploads/2024/10/102451_axmlk.webp';
+    
+            let yoru = document.createElement('option');
+            yoru.innerText = 'ヨル';
+            yoru.value ='https://appmedia.jp/wp-content/uploads/2024/10/102451_3lupz.webp';
+
+            let reizu = document.createElement('option');
+            reizu.innerText = 'レイズ';
+            reizu.value ='https://appmedia.jp/wp-content/uploads/2024/10/102451_8lwo4.webp';
+
+            let reina = document.createElement('option');
+            reina.innerText = 'レイナ';
+            reina.value ='https://appmedia.jp/wp-content/uploads/2024/10/102451_a3jmc.webp';
+
+            let aiso = document.createElement('option');
+            aiso.innerText = 'アイソ';
+            aiso.value ='https://appmedia.jp/wp-content/uploads/2024/10/102452_ltq0o.webp';
+
+            let weirei = document.createElement('option');
+            weirei.innerText = 'ウェイレイ';
+            weirei.value ='https://appmedia.jp/wp-content/uploads/2023/06/101811_9esu4.webp';
+        
+            let sova = document.createElement('option');
+            sova.innerText = 'ソーヴァ';
+            sova.value ='https://appmedia.jp/wp-content/uploads/2024/10/102452_kawcj.webp';
+
+            let kayo = document.createElement('option');
+            kayo.innerText = 'KAY/O';
+            kayo.value = 'https://appmedia.jp/wp-content/uploads/2024/10/102452_qhcgd.webp';
+
+            let sky = document.createElement('option');
+            sky.innerText = 'スカイ';
+            sky.value = 'https://appmedia.jp/wp-content/uploads/2024/10/102452_n05kl.webp';
+
+            let feid = document.createElement('option');
+            feid.innerText = 'フェイド';
+            feid.value = 'https://appmedia.jp/wp-content/uploads/2024/10/102452_gjwef.webp';
+
+            let buriti = document.createElement('option');
+            buriti.innerText = 'ブリーチ';
+            buriti.value ='https://appmedia.jp/wp-content/uploads/2024/10/102453_zlbdp.webp';
+
+            let gekko = document.createElement('option');
+            gekko.innerText = 'ゲッコー';
+            gekko.value = 'https://appmedia.jp/wp-content/uploads/2024/10/102452_wejd5.webp';
+
+            let teho = document.createElement('option');
+            teho.innerText = 'テホ';
+            teho.value = 'https://appmedia.jp/wp-content/uploads/2025/01/104157_byjz0.webp';
+
+            let sage = document.createElement('option');
+            sage.innerText = 'セージ';
+            sage.value = 'https://appmedia.jp/wp-content/uploads/2024/10/102454_djghe.webp';
+
+            let killjoy = document.createElement('option');
+            killjoy.innerText = 'キルジョイ';
+            killjoy.value = 'https://appmedia.jp/wp-content/uploads/2024/10/102454_yjxc1.webp';
+
+            let saifa = document.createElement('option');
+            saifa.innerText = 'サイファー';
+            saifa.value = 'https://appmedia.jp/wp-content/uploads/2024/10/102454_pdiuz.webp';
+
+            let tyenb = document.createElement('option');
+            tyenb.innerText = 'チェンバー';
+            tyenb.value = 'https://appmedia.jp/wp-content/uploads/2024/10/102454_j0xzl.webp';
+
+            let deadrock = document.createElement('option');
+            deadrock.innerText = 'デッドロック';
+            deadrock.value = 'https://appmedia.jp/wp-content/uploads/2024/10/102455_uevjn.webp';
+
+            let vais = document.createElement('option');
+            vais.innerText = 'ヴァイス';
+            vais.value = 'https://appmedia.jp/wp-content/uploads/2024/09/120938_ac05l.webp';
+
+            let brim = document.createElement('option');
+            brim.innerText = 'ブリムストーン';
+            brim.value = 'https://appmedia.jp/wp-content/uploads/2024/10/102454_7l3dv.webp';
+
+            let astra = document.createElement('option');
+            astra.innerText = 'アストラ';
+            astra.value = 'https://appmedia.jp/wp-content/uploads/2024/10/102453_15fkt.webp';
+
+            let vaipa = document.createElement('option');
+            vaipa.innerText = 'ヴァイパー';
+            vaipa.value = 'https://appmedia.jp/wp-content/uploads/2024/10/102453_dqika.webp';
+
+            let omen = document.createElement('option');
+            omen.innerText = 'オーメン';
+            omen.value = 'https://appmedia.jp/wp-content/uploads/2024/10/102453_87ag3.webp';
+
+            let haba = document.createElement('option');
+            haba.innerText = 'ハーバー';
+            haba.value = 'https://appmedia.jp/wp-content/uploads/2024/10/102454_ua8fj.webp';
+
+            let kurov = document.createElement('option');
+            kurov.innerText = 'クローヴ';
+            kurov.value = 'https://appmedia.jp/wp-content/uploads/2024/10/102453_r6kd3.webp';
+
+            parent.appendChild(select);
+            select.appendChild(jett);
+            select.appendChild(feni);
+            select.appendChild(neon);
+            select.appendChild(yoru);
+            select.appendChild(reizu);
+            select.appendChild(reina);
+            select.appendChild(aiso);
+            select.appendChild(weirei);
+            select.appendChild(sova);
+            select.appendChild(kayo);
+            select.appendChild(sky);
+            select.appendChild(feid);
+            select.appendChild(buriti);
+            select.appendChild(gekko);
+            select.appendChild(teho);
+            select.appendChild(sage);
+            select.appendChild(killjoy);
+            select.appendChild(saifa);
+            select.appendChild(tyenb);
+            select.appendChild(deadrock);
+            select.appendChild(vais);
+            select.appendChild(brim);
+            select.appendChild(astra);
+            select.appendChild(vaipa);
+            select.appendChild(omen);
+            select.appendChild(haba);
+            select.appendChild(kurov);
+
+            let label = document.createElement('label');
+            let text = document.getElementById('ban_id' + menber).value;
+            ban_img.appendChild(label);
+            label.innerText = text;
+            label.id = 'ban_name' + menber;
+            label.classList.add('text');
+
+            decide.style.display = 'none';
+            random.style.display = 'inline';
+        }
+        
+        if(chara.checked && input_roll.checked)
+        {
+            chara_error.style.display = 'inline';
+        }
+
         menber++;
 
     }
+    if(!chara.checked && !input_roll.checked)
+    {
+        chara_error.style.display = 'inline';
+
+    }
+}
+
+function ban_randomButton()
+{
+    let remove = 0;
+    let number = 1;
+    let menber = document.getElementById('ban_number').value;
+
+    let check_chara = document.getElementById('chara_check');
+    let check_roll = document.getElementById('input_roll');
+
+    let random = document.getElementById('ban_random');
+    let reroll = document.getElementById('ban_reroll');
+
+    while(menber > number -1)
+    {
+        let select = document.getElementById('select' + number);
+        let select_value = select.value;
+
+        let parent = document.getElementById('ban_name' + number);
+        let img = document.createElement('img');
+        parent.appendChild(img);
+        if(check_chara.checked)
+        {       
+            ban_chara_shuffle(down_chara);
+            new_img = down_chara.filter(img => !img.includes(select_value));
+            img.src = new_img[number -1];   
+            img.classList.add('picture');
+            img.id = 'picture' + number;
+        }
+        if(check_roll.checked)
+        {
+            if(select_value == 'デュエリスト')
+            {
+                let dhue_number = [2,3,4];
+
+                let none_dhue = down_roll.filter(down_roll => dhue_number.includes(down_roll.id));
+                ban_dhue_shuffle(none_dhue);
+
+                img.src = none_dhue[number - 1].img;
+                img.classList.add('picture');
+                img.id = 'picture' + number;
+            }
+        }
+        if(check_roll.checked)
+        {
+            if(select_value == 'イニシエーター')
+            {
+                let inisi_number = [1,3,4];
+
+                let none_inisi = down_roll.filter(down_roll => inisi_number.includes(down_roll.id));
+                ban_inisi_shuffle(none_inisi);
+
+                img.src = none_inisi[number - 1].img;
+                img.classList.add('picture');
+                img.id = 'picture' + number;
+            }
+        }
+        if(check_roll.checked)
+        {
+            if(select_value == 'センチネル')
+            {
+                let senti_number = [1,2,4];
+
+                let none_senti = down_roll.filter(down_roll => senti_number.includes(down_roll.id));
+                ban_senti_shuffle(none_senti);
+
+                img.src = none_senti[number - 1].img;
+                img.classList.add('picture');
+                img.id = 'picture' + number;
+            }
+        }
+        if(check_roll.checked)
+        {
+            if(select_value == 'コントローラー')
+            {
+                let cont_number = [1,2,3];
+
+                let none_cont = down_roll.filter(down_roll => cont_number.includes(down_roll.id));
+                ban_cont_shuffle(none_cont);
+
+                img.src = none_cont[number - 1].img;
+                img.classList.add('picture');
+                img.id = 'picture' + number;
+            }
+        }
+        let picture = document.getElementById('picture' + number).src;
+        remove_picture.push(picture);
+
+        console.log(remove_picture)
+
+        random.style.display = 'none';
+        reroll.style.display = 'inline';
+        number++;
+    }
+    if(hasDuplicates(remove_picture))
+    {
+        ban_rerollButton();
+    }
+}
+
+function hasDuplicates(array) {
+  return new Set(array).size !== array.length;
+}
+
+function ban_rerollButton()
+{
+    let menber = 1;
+    let menber_ = document.getElementById('ban_number').value;
+    remove_picture.length = 0;
+
+    while(menber_ > menber -1)
+    {
+        let picture = document.getElementById('picture' + menber);
+        picture.remove();
+
+        menber++;
+    }
+    ban_randomButton();
+}
+
+function ban_roll_shuffle(down_roll)
+{
+    for(let i = down_roll.length -1; i>0; i--){
+        const j = Math.floor(Math.random() * (i + 1)); 
+        //Math.floor()で小数点以下切り捨て整数に
+        //Math.randomで0以上1未満のランダムな小数を返す
+        //Math.random() * (i + 1) によって、0以上j以下iの範囲でランダムな整数 j を生成します。
+        [down_roll[i], down_roll[j]] = [down_roll[j], down_roll[i]];
+    }
+    return down_roll;
+}
+
+function ban_chara_shuffle(down_chara) //lengthで文字列が何個あるかを取得してる
+{
+    for(let i = down_chara.length -1; i>0; i--){
+        const j = Math.floor(Math.random() * (i + 1)); 
+        //Math.floor()で小数点以下切り捨て整数に
+        //Math.randomで0以上1未満のランダムな小数を返す
+        //Math.random() * (i + 1) によって、0以上j以下iの範囲でランダムな整数 j を生成します。
+        [down_chara[i], down_chara[j]] = [down_chara[j], down_chara[i]];
+    }
+    return down_chara;
+}
+
+function ban_dhue_shuffle(none_dhue)
+{
+    for(let i = none_dhue.length -1; i>0; i--){
+        const j = Math.floor(Math.random() * (i + 1)); 
+        //Math.floor()で小数点以下切り捨て整数に
+        //Math.randomで0以上1未満のランダムな小数を返す
+        //Math.random() * (i + 1) によって、0以上j以下iの範囲でランダムな整数 j を生成します。
+        [none_dhue[i], none_dhue[j]] = [none_dhue[j], none_dhue[i]];
+    }
+    return none_dhue;
+}
+function ban_inisi_shuffle(none_inisi)
+{
+    for(let i = none_inisi.length -1; i>0; i--){
+        const j = Math.floor(Math.random() * (i + 1)); 
+        //Math.floor()で小数点以下切り捨て整数に
+        //Math.randomで0以上1未満のランダムな小数を返す
+        //Math.random() * (i + 1) によって、0以上j以下iの範囲でランダムな整数 j を生成します。
+        [none_inisi[i], none_inisi[j]] = [none_inisi[j], none_inisi[i]];
+    }
+    return none_inisi;
+}
+function ban_senti_shuffle(none_senti)
+{
+    for(let i = none_senti.length -1; i>0; i--){
+        const j = Math.floor(Math.random() * (i + 1)); 
+        //Math.floor()で小数点以下切り捨て整数に
+        //Math.randomで0以上1未満のランダムな小数を返す
+        //Math.random() * (i + 1) によって、0以上j以下iの範囲でランダムな整数 j を生成します。
+        [none_senti[i], none_senti[j]] = [none_senti[j], none_senti[i]];
+    }
+    return none_senti;
+}
+function ban_senti_shuffle(none_cont)
+{
+    for(let i = none_cont.length -1; i>0; i--){
+        const j = Math.floor(Math.random() * (i + 1)); 
+        //Math.floor()で小数点以下切り捨て整数に
+        //Math.randomで0以上1未満のランダムな小数を返す
+        //Math.random() * (i + 1) によって、0以上j以下iの範囲でランダムな整数 j を生成します。
+        [none_cont[i], none_cont[j]] = [none_cont[j], none_cont[i]];
+    }
+    return none_cont;
 }
