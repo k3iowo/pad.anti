@@ -13,9 +13,16 @@
             <div class="text">完全ランダム</div>
             <div>人数を書いてください</div> 
         <div id="menber">
-            <p><input type="number" id="menber_"></p>
+            <p>
+                <input type="number" id="menber_">
+                <input type="checkbox" id="custom_1">カスタム
+            </p>
         </div>
         <p>
+            <div id="team1_random_text" style="display: none;" class="text">チーム1</div>
+            <div id="team1_random"></div>
+            <div id="team2_random_text" style="display: none;" class="text">チーム2</div>
+            <div id="team2_random"></div>
             <div><input type="button" id="send" style="display: inline;" value="送信！" onclick="pushButton()"></div>
             <p id="error" style="color: red; display: none;">入力がありません！</p>
         </p>
@@ -25,6 +32,7 @@
         </div>
         <div id="name"></div>
         <p><input type="button" id="random" style="display: none;" value="ランダム抽選！" onclick="randomButton()"></p>
+        <p><input type="button" id="random_custom" style="display: none;" value="ランダム抽選！" onclick="randomButton_custom()"></p>
         <p><input type="button" id="reroll" style="display: none;" value="再抽選！" onclick="reroll()"></p>
         </div>
         
