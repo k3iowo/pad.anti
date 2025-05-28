@@ -28,7 +28,6 @@ const picture_images = [
     'https://appmedia.jp/wp-content/uploads/2024/10/102453_87ag3.webp',//オーメン
     'https://appmedia.jp/wp-content/uploads/2024/10/102454_ua8fj.webp',//ハーバー
     'https://appmedia.jp/wp-content/uploads/2024/10/102453_r6kd3.webp',//クローヴ
-
 ]
 
 const dhue_images = [
@@ -139,18 +138,112 @@ let down_roll = [
     { id: 4, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102453_87ag3.webp'},
     { id: 4, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102454_ua8fj.webp'},
     { id: 4, img: 'https://appmedia.jp/wp-content/uploads/2024/10/102453_r6kd3.webp'},
-
 ]
 let remove_picture = [];
+
+const custom1_number = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27];
+
+const custom_picture_1 = [
+    'https://appmedia.jp/wp-content/uploads/2024/10/102450_urswg.webp',//ジェット
+    'https://appmedia.jp/wp-content/uploads/2024/10/102451_n4wda.webp',//フェニックス
+    'https://appmedia.jp/wp-content/uploads/2024/10/102451_axmlk.webp',//ネオン
+    'https://appmedia.jp/wp-content/uploads/2024/10/102451_3lupz.webp',//ヨル
+    'https://appmedia.jp/wp-content/uploads/2024/10/102451_8lwo4.webp',//レイズ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102451_a3jmc.webp',//レイナ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_ltq0o.webp',//アイソ
+    'https://appmedia.jp/wp-content/uploads/2023/06/101811_9esu4.webp',//ウェイレイ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_kawcj.webp',//ソーヴァ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_qhcgd.webp',//KAY/O
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_n05kl.webp',//スカイ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_gjwef.webp',//フェイド
+    'https://appmedia.jp/wp-content/uploads/2024/10/102453_zlbdp.webp',//ブリーチ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_wejd5.webp',//ゲッコー
+    'https://appmedia.jp/wp-content/uploads/2025/01/104157_byjz0.webp',//テホ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_djghe.webp',//セージ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_yjxc1.webp',//キルジョイ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_pdiuz.webp',//サイファー
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_j0xzl.webp',//チェンバー
+    'https://appmedia.jp/wp-content/uploads/2024/10/102455_uevjn.webp',//デッドロック
+    'https://appmedia.jp/wp-content/uploads/2024/09/120938_ac05l.webp',//ヴァイス
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_7l3dv.webp',//ブリムストーン
+    'https://appmedia.jp/wp-content/uploads/2024/10/102453_15fkt.webp',//アストラ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102453_dqika.webp',//ヴァイパー
+    'https://appmedia.jp/wp-content/uploads/2024/10/102453_87ag3.webp',//オーメン
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_ua8fj.webp',//ハーバー
+    'https://appmedia.jp/wp-content/uploads/2024/10/102453_r6kd3.webp',//クローヴ
+]
+
+const custom2_number = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27];
+
+const custom_picture_2 = [
+    'https://appmedia.jp/wp-content/uploads/2024/10/102450_urswg.webp',//ジェット
+    'https://appmedia.jp/wp-content/uploads/2024/10/102451_n4wda.webp',//フェニックス
+    'https://appmedia.jp/wp-content/uploads/2024/10/102451_axmlk.webp',//ネオン
+    'https://appmedia.jp/wp-content/uploads/2024/10/102451_3lupz.webp',//ヨル
+    'https://appmedia.jp/wp-content/uploads/2024/10/102451_8lwo4.webp',//レイズ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102451_a3jmc.webp',//レイナ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_ltq0o.webp',//アイソ
+    'https://appmedia.jp/wp-content/uploads/2023/06/101811_9esu4.webp',//ウェイレイ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_kawcj.webp',//ソーヴァ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_qhcgd.webp',//KAY/O
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_n05kl.webp',//スカイ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_gjwef.webp',//フェイド
+    'https://appmedia.jp/wp-content/uploads/2024/10/102453_zlbdp.webp',//ブリーチ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102452_wejd5.webp',//ゲッコー
+    'https://appmedia.jp/wp-content/uploads/2025/01/104157_byjz0.webp',//テホ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_djghe.webp',//セージ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_yjxc1.webp',//キルジョイ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_pdiuz.webp',//サイファー
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_j0xzl.webp',//チェンバー
+    'https://appmedia.jp/wp-content/uploads/2024/10/102455_uevjn.webp',//デッドロック
+    'https://appmedia.jp/wp-content/uploads/2024/09/120938_ac05l.webp',//ヴァイス
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_7l3dv.webp',//ブリムストーン
+    'https://appmedia.jp/wp-content/uploads/2024/10/102453_15fkt.webp',//アストラ
+    'https://appmedia.jp/wp-content/uploads/2024/10/102453_dqika.webp',//ヴァイパー
+    'https://appmedia.jp/wp-content/uploads/2024/10/102453_87ag3.webp',//オーメン
+    'https://appmedia.jp/wp-content/uploads/2024/10/102454_ua8fj.webp',//ハーバー
+    'https://appmedia.jp/wp-content/uploads/2024/10/102453_r6kd3.webp',//クローヴ
+]
 
 function pushButton()
 {
     let $menber_number = document.getElementById('menber_').value; //値が欲しい場合はvalueを追加 https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q12166934472
     const errorMessage = document.getElementById('error');
+    let custom_1 = document.getElementById('custom_1');
 
     if($menber_number !== '') //テキストの中身が空白の時を言いたい場合nullじゃなくて''を使う
     {
-        errorMessage.style.display = 'none';
+        if(custom_1.checked && $menber_number == 10)
+        {
+            let parent= document.getElementById('menber');
+            let text = document.createElement('div');
+            text.innerText = '同じチームの人をチェックボックスをつけてください';
+            parent.appendChild(text);
+
+            for(let i = 1; i < 11; i++)
+            {
+                let br = document.createElement('br');
+                let team1_label = document.createElement('label');
+                let check = document.createElement('input');
+                check.type = 'checkbox';
+                check.id =  'custom_random_check' + i;
+
+                team1_label.innerText = i + '人目の名前';
+
+                let team1_input = document.createElement('input');
+                team1_input.id = 'custom_random' + i;
+
+                parent.appendChild(br);
+                parent.appendChild(team1_label);
+                parent.appendChild(team1_input);
+                parent.appendChild(check);
+            }
+            decide.style.display = 'inline';
+            send.style.display = 'none';
+        }else
+        {
+
+            errorMessage.style.display = 'none';
         let numberIndex = 1;
 
 
@@ -161,7 +254,7 @@ function pushButton()
         decide.style.display = 'inline';
         send.style.display = 'none';
         }
-    while(numberIndex - 1 < $menber_number){
+        while(numberIndex - 1 < $menber_number){
         let elementId = document.createElement('br');
         let label = document.createElement('label');
         label.textContent = (numberIndex) + "人目の名前を入力　　　";//適当なところにlabelを追加：textcontentで入力
@@ -176,6 +269,7 @@ function pushButton()
         parent.appendChild(input_menber); //jsでの改行をしらべる
     
         numberIndex++;
+        }
       }
     }else
     {
@@ -189,8 +283,65 @@ function decideButton()
 {
     const errorMessage = document.getElementById('error');
     let $menber_number = document.getElementById('menber_').value; //値が欲しい場合はvalueを追加 https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q12166934472
+    let check = document.getElementById('custom_1');
     let numberIndex = 1;
-    let name = document.getElementById('ID' + numberIndex).value;
+
+    if($menber_number == 10 && check.checked)
+    {
+        let team1_name = [];
+        let team2_name = [];
+        let team1 = document.getElementById('team1_random');
+        let team2 = document.getElementById('team2_random');
+
+        let text1 = document.getElementById('team1_random_text');
+        let text2 = document.getElementById('team2_random_text');
+
+        for(let i = 1; i < 11; i++)
+        {
+            let name = document.getElementById('custom_random' + i).value;
+            if(name !== '')
+            {
+                errorMessage.style.display = 'none';
+                let team_check = document.getElementById('custom_random_check' + i);
+                if(team_check.checked)
+                {
+                    team1_name.push(name);               
+                }
+                if(!team_check.checked)
+                {
+                    team2_name.push(name);
+                }
+            }else
+            {
+                errorMessage.style.display = 'block';
+                break;
+            }
+        }
+        for(let i = 0; i < 5; i++) //tean1
+        {
+            let div = document.createElement('div');
+            let name = team1_name[i];
+            div.innerText = name;
+            div.id = 'num_team1_' + i;
+            team1.appendChild(div);
+        }
+        for(let i = 0; i < 5; i++) //tean1
+        {
+            let div = document.createElement('div');
+            let name = team2_name[i];
+            div.innerText = name;
+            div.id = 'num_team2_' + i;
+            team2.appendChild(div);
+        }
+        const random_custom = document.getElementById('random_custom');
+        decide.style.display = 'none';
+        random_custom.style.display = 'inline';
+
+        text1.style.display = 'inline';
+        text2.style.display = 'inline';
+    }else
+    {
+        let name = document.getElementById('ID' + numberIndex).value;
 
     if(name === '')
     {
@@ -198,16 +349,17 @@ function decideButton()
     }else
     {
         errorMessage.style.display = 'none';
-         while(numberIndex - 1 < $menber_number){
-        let name = document.getElementById('ID' + numberIndex).value;
-        if(name !== '')
+        while(numberIndex - 1 < $menber_number)
         {
+            let name = document.getElementById('ID' + numberIndex).value;
+            if(name !== '')
+            {
             let parent_name = document.getElementById('name');
 
             let elementId = document.createElement('div'); //https://posipan.com/add-remove-id-class/
             elementId.id = 'id' + numberIndex;
             elementId.innerText = name;
-            elementId.classList.add('text');
+            elementId.classList.add('picture_text');
             parent_name.appendChild(elementId)
 
             numberIndex++;
@@ -216,9 +368,63 @@ function decideButton()
             const random = document.getElementById('random');
             decide.style.display = 'none';
             random.style.display = 'inline';
+            }
         }
     }
     }
+}
+
+function randomButton_custom()
+{
+    custom1_shuffle(custom1_number);
+    custom2_shuffle(custom2_number);
+    for(let i = 0; i < 5; i++)
+    {
+        let parent1 = document.getElementById('num_team1_' + i);
+        let parent2 = document.getElementById('num_team2_' + i);
+
+        let result1 = custom1_number[i];
+        let result2 = custom2_number[i];
+
+        let img_1 = document.createElement('img');
+        let picture1 = custom_picture_1[result1 -1];
+        img_1.src = picture1;
+        img_1.classList.add("picture");
+        parent1.appendChild(img_1);
+
+        let img_2 = document.createElement('img');
+        let picture2 = custom_picture_2[result2 -1];
+        img_2.src = picture2;
+        img_2.classList.add("picture");
+        parent2.appendChild(img_2);
+
+        console.log(result1);
+        console.log(result2);
+    }
+}
+
+function custom1_shuffle(custom1_number) //lengthで文字列が何個あるかを取得してる
+{
+    for(let i = custom1_number.length -1; i>0; i--){
+        const j = Math.floor(Math.random() * (i + 1)); 
+        //Math.floor()で小数点以下切り捨て整数に
+        //Math.randomで0以上1未満のランダムな小数を返す
+        //Math.random() * (i + 1) によって、0以上j以下iの範囲でランダムな整数 j を生成します。
+        [custom1_number[i], custom1_number[j]] = [custom1_number[j], custom1_number[i]];
+    }
+    return custom1_number;
+}
+
+function custom2_shuffle(custom2_number) //lengthで文字列が何個あるかを取得してる
+{
+    for(let i = custom2_number.length -1; i>0; i--){
+        const j = Math.floor(Math.random() * (i + 1)); 
+        //Math.floor()で小数点以下切り捨て整数に
+        //Math.randomで0以上1未満のランダムな小数を返す
+        //Math.random() * (i + 1) によって、0以上j以下iの範囲でランダムな整数 j を生成します。
+        [custom2_number[i], custom2_number[j]] = [custom2_number[j], custom2_number[i]];
+    }
+    return custom2_number;
 }
 
 function randomButton()
